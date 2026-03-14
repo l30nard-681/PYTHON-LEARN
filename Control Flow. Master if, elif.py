@@ -1,3 +1,7 @@
+
+
+
+#IF ELSE STATEMENT
 '''server_online=True
 is_active=True
 account_exist=True
@@ -27,8 +31,8 @@ else:
     print("server down try again later")'''
       
             
-
-requests = [
+#FOR LOOP WITH IF, ELIF, ELSE STATEMENT
+'''requests = [
     {"method": "GET", "status_code": 200},
     {"method": "POST", "status_code": 201},
     {"method": "GET", "status_code": 401},
@@ -46,5 +50,48 @@ for request in requests:
     elif  request["status_code"] == 400:
         print("Bad request — client error")  
     else:
-        print("Unknown request") 
+        print("Unknown request")''' 
 
+#WHILE LOOP WITH IF, ELIF, ELSE STATEMENT
+"The while condition should not be used to do things —"
+" just to repeat until it reaches the coder's satisfaction for it to stop."
+
+"""valid_methods = ["GET", "POST", "DELETE"]
+user_input=input("enter a valid metthod")
+while user_input.upper() not in valid_methods:
+    print("invalid method")
+    user_input=input("Try again")
+print(f" valid method received {user_input.upper()}")"""
+
+
+
+
+
+
+valid_methods = ["GET", "POST", "DELETE"]
+max_requests = 5
+request_count = 0
+user_input=input("enter a valid method \n")
+while request_count<=max_requests and user_input.upper()!="STOP":
+    if user_input.upper()  in valid_methods:
+        print(f"Request processed: {user_input.upper()}")
+    else:
+        print("Invalid request — not processed")
+    request_count+=1
+
+    if request_count==max_requests:
+        print(f"rate limit of {max_requests} exceeded")
+    else:
+        user_input=input("enter a request")
+
+     
+    
+      
+
+
+
+   
+    
+        
+            
+        
